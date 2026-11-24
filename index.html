@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f5f1" />
+    <meta
+      name="description"
+      content="Shop considered everyday clothing from Common Form."
+    />
+    <title>Common Form — Clothes for the everyday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      <span>Thoughtful essentials, made to be worn on repeat.</span>
+      <span class="announcement-note">Complimentary shipping over $100</span>
+    </div>
+
+    <header class="site-header">
+      <a class="wordmark" href="#" aria-label="Common Form home">common<span>form</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#shop" data-category-link="All">Shop all</a>
+        <a href="#shop" data-category-link="Clothing">Clothing</a>
+        <a href="#shop" data-category-link="Knitwear">Knitwear</a>
+        <a href="#shop" data-category-link="Accessories">Accessories</a>
+      </nav>
+      <div class="header-actions">
+        <label class="search-box">
+          <span class="sr-only">Search products</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.5 4.5"></path></svg>
+          <input id="search-input" type="search" placeholder="Search" />
+        </label>
+        <label class="icon-button theme-toggle" title="Switch theme">
+          <input class="theme-checkbox" id="theme-toggle" type="checkbox" aria-label="Use dark mode" />
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.8 8.8 0 0 1 8.9 3.8 8.9 8.9 0 1 0 20.2 15.1Z"></path></svg>
+        </label>
+        <button class="bag-button" type="button" aria-label="Open shopping bag">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 8h15l-1 13h-13l-1-13Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg>
+          <span>Bag</span><span class="bag-count" aria-live="polite">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=2000&q=85"
+          alt="Friends in relaxed everyday outfits walking together"
+        />
+        <div class="hero-shade"></div>
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow">The everyday, considered</p>
+          <h1 id="hero-title">A little less,<br />a lot more you.</h1>
+          <p class="hero-description">Easy pieces. Better days. Find your new forever favorites.</p>
+          <a class="button button-light hero-cta" href="#shop">Explore the collection <span aria-hidden="true">↗</span></a>
+        </div>
+        <span class="hero-caption">01 / THE EVERYDAY EDIT</span>
+      </section>
+
+      <section class="experiment-wrap" aria-label="A/B testing demo">
+        <div class="experiment-bar">
+          <div class="experiment-title">
+            <span class="experiment-dot"></span>
+            <span><strong>Experiment 01</strong><span class="experiment-subtitle"> · Hero message</span></span>
+          </div>
+          <div class="variant-switch" role="group" aria-label="Choose A/B test variant">
+            <button type="button" data-variant="A" aria-pressed="true">A</button>
+            <button type="button" data-variant="B" aria-pressed="false">B</button>
+          </div>
+          <span class="experiment-help">Switch variants to compare the headline and CTA</span>
+          <button class="metrics-toggle" type="button" aria-expanded="false" aria-controls="metrics-panel">View test results <span aria-hidden="true">＋</span></button>
+        </div>
+        <div class="metrics-panel" id="metrics-panel" hidden>
+          <div class="metrics-heading">
+            <div><p class="eyebrow">Live demo results</p><h2>What’s resonating?</h2></div>
+            <button type="button" class="reset-metrics">Reset metrics</button>
+          </div>
+          <p class="metrics-note">Counts are saved in this browser. Add-to-bag is a demo conversion.</p>
+          <div class="metrics-grid">
+            <div class="metric-card"><span>Variant</span><strong>A</strong><small>Page views</small><b data-metric="views-A">0</b><small>CTA clicks</small><b data-metric="clicks-A">0</b><small>Add-to-bag</small><b data-metric="conversions-A">0</b></div>
+            <div class="metric-card"><span>Variant</span><strong>B</strong><small>Page views</small><b data-metric="views-B">0</b><small>CTA clicks</small><b data-metric="clicks-B">0</b><small>Add-to-bag</small><b data-metric="conversions-B">0</b></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shop-section" id="shop">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Made for your kind of everyday</p>
+            <h2>The good stuff</h2>
+          </div>
+          <div class="shop-controls">
+            <div class="category-filters" role="group" aria-label="Filter products by category">
+              <button class="filter-button active" type="button" data-category="All" aria-pressed="true">All pieces</button>
+              <button class="filter-button" type="button" data-category="Clothing" aria-pressed="false">Clothing</button>
+              <button class="filter-button" type="button" data-category="Knitwear" aria-pressed="false">Knitwear</button>
+              <button class="filter-button" type="button" data-category="Accessories" aria-pressed="false">Accessories</button>
+            </div>
+            <label class="sort-control">Sort by
+              <select id="sort-select" aria-label="Sort products">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: low to high</option>
+                <option value="price-high">Price: high to low</option>
+                <option value="name">Name</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <p class="result-count" aria-live="polite"></p>
+        <div class="product-grid" id="product-grid" aria-live="polite">
+          <article class="product-card">
+            <div class="product-image-wrap"><img class="product-image" src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="The Sunday Shirt" /><span class="product-tag">Bestseller</span><button class="favorite-button" type="button" data-favorite="1" aria-label="Add to favorites: The Sunday Shirt" aria-pressed="false">♡</button></div>
+            <div class="product-info"><div><h3 class="product-name">The Sunday Shirt</h3><p class="product-category">Clothing</p></div><p class="product-price">$78.00</p></div>
+            <button class="add-button" type="button" data-add="1">Add to bag <span aria-hidden="true">＋</span></button>
+          </article>
+          <article class="product-card">
+            <div class="product-image-wrap"><img class="product-image" src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Everyday Knit" /><span class="product-tag">New color</span><button class="favorite-button" type="button" data-favorite="2" aria-label="Add to favorites: Everyday Knit" aria-pressed="false">♡</button></div>
+            <div class="product-info"><div><h3 class="product-name">Everyday Knit</h3><p class="product-category">Knitwear</p></div><p class="product-price">$96.00</p></div>
+            <button class="add-button" type="button" data-add="2">Add to bag <span aria-hidden="true">＋</span></button>
+          </article>
+          <article class="product-card">
+            <div class="product-image-wrap"><img class="product-image" src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Easy Linen Trouser" /><button class="favorite-button" type="button" data-favorite="3" aria-label="Add to favorites: Easy Linen Trouser" aria-pressed="false">♡</button></div>
+            <div class="product-info"><div><h3 class="product-name">Easy Linen Trouser</h3><p class="product-category">Clothing</p></div><p class="product-price">$110.00</p></div>
+            <button class="add-button" type="button" data-add="3">Add to bag <span aria-hidden="true">＋</span></button>
+          </article>
+          <article class="product-card">
+            <div class="product-image-wrap"><img class="product-image" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="The Weekender" /><button class="favorite-button" type="button" data-favorite="4" aria-label="Add to favorites: The Weekender" aria-pressed="false">♡</button></div>
+            <div class="product-info"><div><h3 class="product-name">The Weekender</h3><p class="product-category">Accessories</p></div><p class="product-price">$64.00</p></div>
+            <button class="add-button" type="button" data-add="4">Add to bag <span aria-hidden="true">＋</span></button>
+          </article>
+          <article class="product-card">
+            <div class="product-image-wrap"><img class="product-image" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Soft Structure Tee" /><button class="favorite-button" type="button" data-favorite="5" aria-label="Add to favorites: Soft Structure Tee" aria-pressed="false">♡</button></div>
+            <div class="product-info"><div><h3 class="product-name">Soft Structure Tee</h3><p class="product-category">Clothing</p></div><p class="product-price">$48.00</p></div>
+            <button class="add-button" type="button" data-add="5">Add to bag <span aria-hidden="true">＋</span></button>
+          </article>
+          <article class="product-card">
+            <div class="product-image-wrap"><img class="product-image" src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Ribbed Layer" /><span class="product-tag">Just in</span><button class="favorite-button" type="button" data-favorite="6" aria-label="Add to favorites: Ribbed Layer" aria-pressed="false">♡</button></div>
+            <div class="product-info"><div><h3 class="product-name">Ribbed Layer</h3><p class="product-category">Knitwear</p></div><p class="product-price">$88.00</p></div>
+            <button class="add-button" type="button" data-add="6">Add to bag <span aria-hidden="true">＋</span></button>
+          </article>
+          <article class="product-card">
+            <div class="product-image-wrap"><img class="product-image" src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="The Market Tote" /><button class="favorite-button" type="button" data-favorite="7" aria-label="Add to favorites: The Market Tote" aria-pressed="false">♡</button></div>
+            <div class="product-info"><div><h3 class="product-name">The Market Tote</h3><p class="product-category">Accessories</p></div><p class="product-price">$42.00</p></div>
+            <button class="add-button" type="button" data-add="7">Add to bag <span aria-hidden="true">＋</span></button>
+          </article>
+          <article class="product-card">
+            <div class="product-image-wrap"><img class="product-image" src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Relaxed Chino" /><button class="favorite-button" type="button" data-favorite="8" aria-label="Add to favorites: Relaxed Chino" aria-pressed="false">♡</button></div>
+            <div class="product-info"><div><h3 class="product-name">Relaxed Chino</h3><p class="product-category">Clothing</p></div><p class="product-price">$92.00</p></div>
+            <button class="add-button" type="button" data-add="8">Add to bag <span aria-hidden="true">＋</span></button>
+          </article>
+        </div>
+        <p class="no-results" hidden>No pieces found. Try another search or category.</p>
+      </section>
+
+      <section class="newsletter">
+        <div><p class="eyebrow">A good thing in your inbox</p><h2>Notes from the slow lane.</h2><p>New arrivals, thoughtful reads, and 10% off your first order.</p></div>
+        <form class="newsletter-form">
+          <label class="sr-only" for="email-input">Email address</label>
+          <input id="email-input" type="email" placeholder="Your email address" required />
+          <button class="button" type="submit">Count me in <span aria-hidden="true">→</span></button>
+          <span class="newsletter-message" aria-live="polite"></span>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark" href="#">common<span>form</span></a>
+      <p>Wear what feels like you.</p>
+      <span>© 2025 Common Form. Made for the everyday.</span>
+    </footer>
+
+    <div class="drawer-backdrop" hidden></div>
+    <aside class="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+      <div class="drawer-heading"><div><p class="eyebrow">Your selection</p><h2>Your bag <span class="drawer-count">(0)</span></h2></div><button class="close-drawer icon-button" type="button" aria-label="Close shopping bag">×</button></div>
+      <div class="cart-items"></div>
+      <div class="cart-footer"><p class="shipping-note">You’re <strong class="shipping-remaining">$100</strong> away from complimentary shipping.</p><div class="cart-subtotal"><span>Subtotal</span><strong>$0.00</strong></div><p class="tax-note">Taxes and shipping calculated at checkout.</p><button class="button checkout-button" type="button">Continue to checkout <span aria-hidden="true">→</span></button><button class="continue-shopping" type="button">Keep browsing</button></div>
+    </aside>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
